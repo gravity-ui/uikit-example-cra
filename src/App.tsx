@@ -117,7 +117,7 @@ export const App = () => {
                         className={b('button')}
                         size="l"
                         view="outlined"
-                        href="https://preview.yandexcloud.dev/uikit/"
+                        href="https://preview.gravity-ui.com/uikit/"
                         target="_blank"
                     >
                         <Icon data={iconStorybook} />
