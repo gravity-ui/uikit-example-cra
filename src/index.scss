@@ -1,5 +1,27 @@
 @import '~@gravity-ui/uikit/styles/styles.css';
 
+.g-root_theme_light {
+    --g-color-base-brand: #8d8cff;
+    --g-color-base-brand-hover: #7e7dff;
+    --g-color-base-selection: #f1f1ff;
+    --g-color-base-selection-hover: #e2e2ff;
+    --g-color-line-brand: #8d8cff;
+    --g-color-text-brand: #605efc;
+    --g-color-text-link: #605efc;
+    --g-color-text-link-hover: #5250bb;
+}
+
+.g-root_theme_dark {
+    --g-color-base-brand: #8d8cff;
+    --g-color-base-brand-hover: #7e7dff;
+    --g-color-base-selection: #f1f1ff;
+    --g-color-base-selection-hover: #e2e2ff;
+    --g-color-line-brand: #8d8cff;
+    --g-color-text-brand: #605efc;
+    --g-color-text-link: #605efc;
+    --g-color-text-link-hover: #5250bb;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
