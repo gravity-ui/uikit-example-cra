@@ -1,45 +1,47 @@
 @import '~@gravity-ui/uikit/styles/styles.css';
 
-.g-root_theme_light {
-    --g-color-base-brand: #8d8cff;
-    --g-color-base-brand-hover: #7e7dff;
-    --g-color-base-selection: #f1f1ff;
-    --g-color-base-selection-hover: #e2e2ff;
-    --g-color-line-brand: #8d8cff;
-    --g-color-text-brand: #605efc;
-    --g-color-text-link: #605efc;
-    --g-color-text-link-hover: #5250bb;
+.g-root_theme_light,
+.g-root_theme_light-hc {
+  --g-color-base-brand: #8d8cff;
+  --g-color-base-brand-hover: #7e7dff;
+  --g-color-base-selection: #f1f1ff;
+  --g-color-base-selection-hover: #e2e2ff;
+  --g-color-line-brand: #8d8cff;
+  --g-color-text-brand: #605efc;
+  --g-color-text-link: #605efc;
+  --g-color-text-link-hover: #5250bb;
 }
 
-.g-root_theme_dark {
-    --g-color-base-brand: #8d8cff;
-    --g-color-base-brand-hover: #7e7dff;
-    --g-color-base-selection: #f1f1ff;
-    --g-color-base-selection-hover: #e2e2ff;
-    --g-color-line-brand: #8d8cff;
-    --g-color-text-brand: #605efc;
-    --g-color-text-link: #605efc;
-    --g-color-text-link-hover: #5250bb;
+.g-root_theme_dark,
+.g-root_theme_dark-hc {
+  --g-color-base-brand: #8d8cff;
+  --g-color-base-brand-hover: #7e7dff;
+  --g-color-base-selection: #f1f1ff;
+  --g-color-base-selection-hover: #e2e2ff;
+  --g-color-line-brand: #8d8cff;
+  --g-color-text-brand: #605efc;
+  --g-color-text-link: #605efc;
+  --g-color-text-link-hover: #5250bb;
 }
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-        'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .yc-root {
-    &_theme_light {
-        background-color: #fff;
-    }
+  &_theme_light {
+    background-color: #eff3f5;
+  }
 
-    &_theme_dark {
-        background-color: #2d2c33;
-    }
+  &_theme_dark {
+    background-color: #2d2c33;
+  }
 }
