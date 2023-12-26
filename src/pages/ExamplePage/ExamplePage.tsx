@@ -1,6 +1,5 @@
 import React from 'react';
 import block from 'bem-cn-lite';
-// eslint-disable-next-line prettier/prettier
 import { Button, Label, Dialog, Icon } from '@gravity-ui/uikit';
 import iconGitHub from './assets/icons/github.svg';
 import iconStorybook from './assets/icons/storybook.svg';

@@ -10,7 +10,8 @@
     "importHelpers": true,
     "typeRoots": [
       "types",
-      "./node_modules/@types"
+      "./node_modules/@types",
+      ".rehype-highlight/*",
     ],
   },
   "include": [

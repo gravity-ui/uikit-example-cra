@@ -1,22 +1,25 @@
 .ShowMd {
   display: block;
+  width: 100%;
   border: 1px solid var(--g-color-base-selection-hover);
-  padding: 50px 20px;
+  padding: 10px 20px 50px;
+  margin: 5px;
+  box-sizing: border-box;
 
   & h1,
   h2,
   h3,
   h4,
   h5 {
-    color: var(--g-color-private-blue-750-solid);
+    margin-top: 50px;
   }
-
   & pre {
-    background-color: var(--g-color-private-blue-150-solid);
+    max-width: 100%;
+    padding: 2px;
   }
 
   & code {
-    background-color: var(--g-color-private-blue-150-solid);
+    max-width: 100%;
+    padding: 5px;
   }
-
 }

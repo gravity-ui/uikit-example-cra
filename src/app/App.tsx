@@ -1,23 +1,28 @@
 import React from 'react';
-import block from 'bem-cn-lite';
-import logo from '../assets/logo.svg';
-import './App.scss';
+import cls from './App.module.scss';
 import { AppThemeProvider, ThemeSwitcher } from './providers/AppThemeProvider';
 import { ShowMd } from 'src/components/ShowMd/ShowMd';
-
-const b = block('app');
+import { Text } from '@gravity-ui/uikit';
+import { Logo } from 'src/components/Logo/Logo';
 
 
 export const App = () => {
   return (
     <AppThemeProvider>
-      <div className={b()}>
-        <h1 className={b('header')}>UIKit example – Create React App</h1>
-        <img src={logo} width="50" className={b('logo')} alt="logo" />
-        <div className={b('buttons-block')}>
+      <div className={cls.App}>
+        <div className={cls.header}>
+          <Logo />
+          <div>
+            <Text
+              className={cls.title}
+              color={"brand"}
+            >
+              Краткий справочник реакт-разработчика
+            </Text>
+          </div>
           <ThemeSwitcher />
         </div>
-        <ShowMd fileName="01_02.md" />
+        <ShowMd fileName="01_02_hooks.md" />
       </div>
     </AppThemeProvider>
   );

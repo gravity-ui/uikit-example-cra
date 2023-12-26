@@ -17,16 +17,16 @@
 
   `npx create react-app - template typescript my-app`
 
-## Создание проекта с помощью Vite.js
+## Создание проекта с помощью Vite.js с поддержкой TypeScript 
 
-- установка vite.js
+- установка и инициализация vite.js
 
 `npm init vite@latest`
 
 
-- создание react-проекта *test-vite*  с поддержкой TypeScript:
+- в процессе необходимо указать имя проекта (***name***), выбрать фреймворк (***framework***)  и тип проекта (***variant***):
 
-```
+```bash
 Project name: ...  test-vite
 Select a framework: » React
 Select a variant: » TypeScript
@@ -37,17 +37,20 @@ Done. Now run:
   npm install
   npm run dev
 ```
+- затем выполнить предложенные команды:  
+  
   `cd test-vite`
 
   `npm install`
 
   `npm run dev`
 
-
+- В отличие от CRA, Vite не билдит все приложение для режима разработки, а билдит приложение по запросу.
+- Он также использует возможности встроенных модулей ES, esbuild и Rollup для сокращения времени разработки и сборки
 
 ## tsconfig.json
 
-```
+```json
 {
   "extends": {
     // подгружает опции из указанного файла
@@ -105,12 +108,6 @@ Done. Now run:
       "jquery": ["node_modules/jquery/dest/jquery.min.js"]
     }, 
     // - создание псевдонимов для используемых в программе модулей.
-    
-    "":"", //
-    "":"", //
-    "":"", //
-
-
   }
 }
 ```

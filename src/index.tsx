@@ -5,6 +5,8 @@ import { App } from './app/App';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
 
+//import 'highlight.js/styles/github.css';
+
 configure({
   lang: 'en',
 });

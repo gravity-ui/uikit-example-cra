@@ -1,17 +1,19 @@
 import React from 'react';
-import { useTheme } from '../lib/useTheme';
-import { Themes } from '../lib/ThemeContext';
+import { useTheme } from '../../app/providers/AppThemeProvider/lib/useTheme';
+import { Themes } from '../../app/providers/AppThemeProvider/lib/ThemeContext';
 import { Select } from '@gravity-ui/uikit';
-
+import cls from './ThemeSwitcher.module.scss'
 
 export const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div>
+    <div className={cls.ThemeSwitcher}>
       <Select
         value={[String(theme)]}
         placeholder="Values"
         onUpdate={(nextValue) => toggleTheme(Themes[Number(nextValue[0])])}
+        label="Тема:"
+        width="max"
       >
         {
           Themes.map((val, i) => (
