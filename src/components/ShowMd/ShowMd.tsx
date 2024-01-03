@@ -16,7 +16,7 @@ import 'highlight.js/scss/default.scss';
 
 
 export interface ShowMdProps {
-  fileName: string;
+  fileName: string | undefined;
   fileTitle?: string;
 }
 
