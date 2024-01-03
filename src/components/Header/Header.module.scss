@@ -1,0 +1,13 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.title {
+  font-size: larger;
+  line-height: 120%;
+}
