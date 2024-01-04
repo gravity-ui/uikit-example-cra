@@ -5,24 +5,26 @@ import { Text } from '@gravity-ui/uikit';
 import { ThemeSwitcher } from '../ThemeSwitcher/ThemeSwitcher';
 
 
+export interface HeaderProps {
+  titlePage: string;
+}
 
 
-
-export const Header = () => {
-
+export const Header = (props: HeaderProps) => {
+  const { titlePage } = props;
   return (
-    <div className={cls.Header}>
+    <header className={cls.Header}>
       <Logo />
       <div>
         <Text
           className={cls.title}
           color={"brand"}
         >
-          Краткий справочник реакт-разработчика
+          {titlePage}
         </Text>
       </div>
       <ThemeSwitcher />
-    </div>
+    </header>
   );
 };
 

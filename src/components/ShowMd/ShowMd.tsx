@@ -18,14 +18,27 @@ import 'highlight.js/scss/default.scss';
 export interface ShowMdProps {
   fileName: string | undefined;
   fileTitle?: string;
+  isIndex: boolean;
 }
 
 
 export const ShowMd = (props: ShowMdProps) => {
   const {
-    fileName
+    fileName,
+    isIndex,
   } = props;
   const [post, setPost] = useState('');
+  const mdProps = isIndex ?
+    {
+      view: 'normal'
+    }
+    :
+    {
+      view: 'normal',
+      target: '_blank'
+    };
+
+
 
   useEffect(() => {
     import(`../../markdown/${fileName}`)
@@ -49,10 +62,7 @@ export const ShowMd = (props: ShowMdProps) => {
           createElement: 'article',
           a: {
             component: Link,
-            props: {
-              view: 'normal',
-              target: '_blank'
-            },
+            props: mdProps,
           },
         },
       }}>
