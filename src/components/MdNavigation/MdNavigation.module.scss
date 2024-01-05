@@ -1,0 +1,15 @@
+.MdNavigation {
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+  & ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+ 
+  }
+
+  & li {
+    margin-bottom: 20px;
+  }
+}

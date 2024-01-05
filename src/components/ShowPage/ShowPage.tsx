@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
-import { ShowMd } from "../ShowMd/ShowMd";
+import cls from "./ShowPage.module.scss"
+import { GetPost } from 'src/utils/GetPost/GetPost';
 
 export interface ShowPageProps {
   partName: string | undefined;
@@ -13,23 +14,27 @@ export const ShowPage = (props: ShowPageProps) => {
   const { partName, titlePage } = props;
   const { fileName } = useParams();
   const isIndex = !fileName;
-  console.log(partName, titlePage, isIndex, fileName);
-
-  const fullName = ((partName === "") ? "" : (partName + "/"))
-    + (isIndex ? "index.md" : fileName + ".md");
-
-  console.log(fullName);
+  const indexPage = ((partName === "") ? "" : (partName + "/")) + "index.md";
+  const contentPage = partName + "/" + fileName + ".md";
 
 
   return (
     <>
       <Header titlePage={titlePage} />
-      <main>
-        {fullName ?
-          <ShowMd fileName={fullName} isIndex={isIndex} />
-          : null
-        }
-      </main>
+      {isIndex ?
+        <main>
+          <GetPost fileName={indexPage} isIndex={true} />
+        </main>
+        : <div className={cls.ShowPage}>
+          <nav>
+            <GetPost fileName={indexPage} isIndex={true} />
+          </nav>
+          <main>
+
+            <GetPost fileName={contentPage} isIndex={false} />
+          </main>
+        </div>
+      }
     </>
   );
 }

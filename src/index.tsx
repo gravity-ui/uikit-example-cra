@@ -4,6 +4,7 @@ import { configure } from '@gravity-ui/uikit';
 import { App } from './app/App';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
+import { BrowserRouter } from 'react-router-dom';
 
 //import 'highlight.js/styles/github.css';
 
@@ -15,7 +16,9 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 );
 

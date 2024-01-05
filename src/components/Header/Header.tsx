@@ -17,10 +17,10 @@ export const Header = (props: HeaderProps) => {
       <Logo />
       <div>
         <Text
-          className={cls.title}
+          variant="header-1"
           color={"brand"}
         >
-          {titlePage}
+          {titlePage.toUpperCase()}
         </Text>
       </div>
       <ThemeSwitcher />

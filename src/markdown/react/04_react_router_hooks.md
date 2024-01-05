@@ -2,6 +2,8 @@
 
 **React Router** обеспечивает "маршрутизацию на стороне клиента", позволяя приложению обновлять URL-адрес, полученный при переходе по ссылке, без повторного запроса документа с сервера
 
+[Все про react-router v6...](https://it-dev-journal.ru/articles/polnoe-rukovodstvo-po-react-router-v6-podrobno-o-routerah)
+
 ## useHistory
 
 - позволяет взаимодействовать с историей браузера, давая доступ к объекту **history**
