@@ -18,7 +18,7 @@ export const Header = (props: HeaderProps) => {
       <div>
         <Text
           variant="header-1"
-          color={"brand"}
+          color={"info"}
         >
           {titlePage.toUpperCase()}
         </Text>

@@ -13,7 +13,7 @@ export const ThemeSwitcher = () => {
         placeholder="Values"
         onUpdate={(nextValue) => toggleTheme(Themes[Number(nextValue[0])])}
         label="Тема:"
-        width="max"
+        width={130}
       >
         {
           Themes.map((val, i) => (
