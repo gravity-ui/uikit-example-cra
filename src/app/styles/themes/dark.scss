@@ -1,0 +1,44 @@
+.g-root_theme_dark,
+.g-root_theme_dark-hc {
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--g-color-private-yellow-750-solid);
+  }
+
+  & pre {
+    background-color: var(--g-color-private-blue-200-solid);
+  }
+
+  & code {
+    background-color: var(--g-color-private-blue-50-solid);
+    color: var(--g-color-private-blue-850-solid);
+  }
+
+  & .hljs-punctuation {
+    color: var(--g-color-private-white-750-solid);
+  }
+  & .hljs-string {
+    color: var(--g-color-private-yellow-750-solid);
+  }
+  & .hljs-attr {
+    color: var(--g-color-private-blue-850-solid);
+  }
+  & .hljs-title {
+    color: var(--g-color-private-yellow-750-solid);
+  }
+  & .hljs-variable {
+    color: var(--g-color-private-yellow-750-solid);
+  }
+  & .hljs-keyword {
+    color: var(--g-color-private-blue-450-solid);
+  }
+  & .hljs-name {
+    color: var(--g-color-private-blue-650-solid);
+  }
+  & .hljs-tag {
+    color: var(--g-color-private-blue-750-solid);
+  }
+}

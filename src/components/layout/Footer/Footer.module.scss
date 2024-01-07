@@ -1,0 +1,19 @@
+.Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  padding: var(--indent);
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: var(--footer-height);
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: var(--g-color-private-blue-100-solid);
+  border: 1px solid var(--g-color-private-blue-200-solid);
+  z-index: 999;
+}

@@ -4,13 +4,17 @@ import { ShowPage } from 'src/components/ShowPage/ShowPage';
 
 const partNames: Array<string> = ['js', 'react', 'web'];
 
-export const AppRouter = () => {
+type AppRouterProps = {
+  setTitlePage: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const AppRouter: React.FC<AppRouterProps> = ({ setTitlePage }) => {
 
   return (
 
     <Routes>
       <Route path="/"
-        element={<ShowPage partName="" titlePage="Разделы" />}
+        element={<ShowPage partName="" setTitlePage={setTitlePage} />}
       />
       {partNames.map((val) => (
         <Route path={`/${val}`} key={val} >
@@ -19,7 +23,7 @@ export const AppRouter = () => {
             element={
               <ShowPage
                 partName={val}
-                titlePage={`${val.toUpperCase()} Конспекты`}
+                setTitlePage={setTitlePage}
               />
             }
           />
@@ -28,7 +32,7 @@ export const AppRouter = () => {
             element={
               <ShowPage
                 partName={val}
-                titlePage={`${val.toUpperCase()} Конспекты`}
+                setTitlePage={setTitlePage}
               />
             }
           />

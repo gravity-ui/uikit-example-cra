@@ -1,0 +1,25 @@
+:root {
+  --font-family-main: -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+  --font-size-xl: 32px;
+  --font-line-xl: 36px;
+  --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+  --navbar-height: 50px;
+  --sidebar-width: 300px;
+  --sidebar-width-collapsed: 80px;
+  --modal-z-index: 10;
+  --overlay-bg: rgba(0 0 0 / 50%);
+  --max-width: 1400px;
+  --min-width: 200px;
+  --header-height: 45px;
+  --footer-height: 45px;
+  --indent: 20px;
+  --bg-color: var(--g-color-private-blue-100-solid);
+  --box-border: 1px solid var(--g-color-private-blue-200-solid);
+}
