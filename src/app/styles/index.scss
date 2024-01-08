@@ -36,3 +36,14 @@ code {
   width: 100%;
   min-height: 100vh;
 }
+
+.page-wrapper {
+  width: 100%;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  position: relative;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  border-left: 1px solid var(--g-color-private-blue-200-solid);
+  border-right: 1px solid var(--g-color-private-blue-200-solid);
+}

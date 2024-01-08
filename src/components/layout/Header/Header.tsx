@@ -20,7 +20,7 @@ export const Header = (props: HeaderProps) => {
           variant="header-1"
           color={"info"}
         >
-          {titlePage.toUpperCase()}
+          {titlePage}
         </Text>
       </div>
       <ThemeSwitcher />
