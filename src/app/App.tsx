@@ -16,7 +16,7 @@ export const App = () => {
     <AppThemeProvider>
       <Header titlePage={titlePage} />
       <div className="page-wrapper">
-        <AppRouter
+        <AppRouter nav={navSite}
           setTitlePage={setTitlePage}
         />
       </div>

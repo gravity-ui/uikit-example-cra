@@ -1,4 +1,10 @@
-const navSite = [
+export interface TypeNavLink {
+  id: number,
+  name: string,
+  path: string
+}
+
+const navSite: Array<TypeNavLink> = [
   {
     id: 0,
     name: "JavaScript",
@@ -17,3 +23,4 @@ const navSite = [
 ]
 
 export default navSite;
+

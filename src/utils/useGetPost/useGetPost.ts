@@ -16,7 +16,7 @@ export const useGetPost = (props: GetPostProps) => {
   //const [post, setPost] = useState('');
 
   useEffect(() => {
-    import(`../../markdown/${fileName}`)
+    import(`../../markdown${fileName}`)
       .then(res => {
         fetch(res.default)
           .then(res => res.text())

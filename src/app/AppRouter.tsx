@@ -1,22 +1,16 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { TypeNavLink } from 'src/markdown/navSite';
 import { IndexPage } from 'src/pages/IndexPage/IndexPage';
 import { MainPage } from 'src/pages/MainPage/MainPage';
 
-const partNames: Array<string> = ['js', 'react', 'web'];
-
-// export const PageTypes {
-//   MAIN: 'main',
-//   INDEX: 'index',
-//   CONTENT: 'content',
-// }
-
 type AppRouterProps = {
   setTitlePage: React.Dispatch<React.SetStateAction<string>>;
+  nav: TypeNavLink[];
 }
 
 export const AppRouter: React.FC<AppRouterProps> = (props) => {
-  const { setTitlePage } = props;
+  const { setTitlePage, nav } = props;
 
   return (
 
@@ -24,13 +18,13 @@ export const AppRouter: React.FC<AppRouterProps> = (props) => {
       <Route path="/"
         element={<MainPage setTitlePage={setTitlePage} />}
       />
-      {partNames.map((val) => (
-        <Route path={`/${val}`} key={val} >
+      {nav.map((val) => (
+        <Route path={val.path} key={val.id} >
           <Route
             index
             element={
               <IndexPage
-                partName={val}
+                navItem={val}
                 setTitlePage={setTitlePage}
               />
             }

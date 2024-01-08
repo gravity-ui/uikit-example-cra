@@ -7,14 +7,13 @@ import cls from "./MainPage.module.scss"
 
 export interface MainPageProps {
   setTitlePage: React.Dispatch<SetStateAction<string>>
-  // isIndex?: boolean;
 }
 
 export const MainPage: React.FC<MainPageProps> = (props) => {
   const { setTitlePage } = props;
-  setTitlePage("Конспекты");
+  setTitlePage("Конспекты".toUpperCase());
 
-  const fileName = "readme.md";
+  const fileName = "/readme.md";
   const [post, setPost] = useState("");
 
   useGetPost({ fileName, setPost });
