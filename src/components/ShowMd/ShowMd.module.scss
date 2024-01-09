@@ -23,9 +23,13 @@
 .showMdBlock {
   @extend .ShowMd;
   display: block;
-  border-left: 1px solid var(--g-color-private-blue-200-solid);
   padding-left: var(--indent);
   padding-right: var(--indent);
+}
+
+.showMdBlockNav {
+  @extend .showMdBlock;
+  border-left: 1px solid var(--g-color-private-blue-200-solid);
 }
 
 .showMdGrid {
@@ -33,5 +37,3 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
-
-
