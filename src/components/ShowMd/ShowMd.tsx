@@ -1,7 +1,7 @@
 import Markdown from 'markdown-to-jsx';
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import cls from "./ShowMd.module.scss";
-import { Link, Card } from '@gravity-ui/uikit';
+import { Link } from '@gravity-ui/uikit';
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript'; // import JS highlighting
 hljs.registerLanguage('javascript', javascript); // import XML highlighting
@@ -74,10 +74,10 @@ export const ShowMd = (props: ShowMdProps) => {
     }
   }, [post, articleRef, isIndex]);
 
-
+  //    <Card type="container" theme="normal" className={cls.card}>
   return (
     <article ref={articleRef} className={isIndex ? cls.showMdBlock : cls.showMdGrid}>
-      <Card type="container" theme="normal" className={cls.card}>
+      <div className={cls.showMdBlock}>
         <Markdown options={{
           overrides: {
             wrapper: React.Fragment,
@@ -89,7 +89,7 @@ export const ShowMd = (props: ShowMdProps) => {
         }}>
           {post}
         </Markdown>
-      </Card>
+      </div>
       {isIndex ? null : (
 
         <MdNavigation headings={headings} />

@@ -3,22 +3,24 @@ import { Route, Routes } from 'react-router-dom';
 import { TypeNavLink } from 'src/markdown/navSite';
 import { IndexPage } from 'src/pages/IndexPage/IndexPage';
 import { MainPage } from 'src/pages/MainPage/MainPage';
+import { ContentPage } from 'src/pages/ContentPage/ContentPage';
 
 type AppRouterProps = {
   setTitlePage: React.Dispatch<React.SetStateAction<string>>;
-  nav: TypeNavLink[];
+  setNavPart: React.Dispatch<React.SetStateAction<TypeNavLink[]>>;
+  navSite: TypeNavLink[];
+
 }
 
 export const AppRouter: React.FC<AppRouterProps> = (props) => {
-  const { setTitlePage, nav } = props;
+  const { setTitlePage, setNavPart, navSite } = props;
 
   return (
-
     <Routes>
       <Route path="/"
         element={<MainPage setTitlePage={setTitlePage} />}
       />
-      {nav.map((val) => (
+      {navSite.map((val) => (
         <Route path={val.path} key={val.id} >
           <Route
             index
@@ -29,15 +31,16 @@ export const AppRouter: React.FC<AppRouterProps> = (props) => {
               />
             }
           />
-          {/* <Route
+          <Route
             path=":fileName"
             element={
               <ContentPage
-                partName={val}
+                navItem={val}
                 setTitlePage={setTitlePage}
+                setNavPart={setNavPart}
               />
             }
-          /> */}
+          />
         </Route>
       ))};
     </Routes>

@@ -1,0 +1,11 @@
+.ContentPage {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+
+  & p {
+    margin: 10px 0;
+  }
+}

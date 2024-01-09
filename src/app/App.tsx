@@ -11,13 +11,15 @@ import navSite from '../markdown/navSite';
 
 export const App = () => {
   const [titlePage, setTitlePage] = useState("");
+  const [navPart, setNavPart] = useState([{ id: 0, name: "", path: "/" }]);
 
   return (
     <AppThemeProvider>
-      <Header titlePage={titlePage} />
+      <Header titlePage={titlePage} headerNav={navPart} />
       <div className="page-wrapper">
-        <AppRouter nav={navSite}
+        <AppRouter navSite={navSite}
           setTitlePage={setTitlePage}
+          setNavPart={setNavPart}
         />
       </div>
       <Footer nav={navSite} />

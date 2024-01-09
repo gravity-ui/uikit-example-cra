@@ -1,4 +1,4 @@
-import { Card, Link } from "@gravity-ui/uikit";
+import { Link } from "@gravity-ui/uikit";
 import React from "react";
 import cls from "./MdNavigation.module.scss"
 
@@ -13,19 +13,19 @@ interface MdNavigationProps {
 }
 
 const MdNavigation: React.FC<MdNavigationProps> = ({ headings }) => {
-
+  //     <Card type="container" theme="normal" >
   return (
-    <Card type="container" theme="normal" >
-      <nav className={cls.MdNavigation}>
-        <ul>
-          {headings.map((heading) => (
-            <li key={heading.id}>
-              <Link href={`#${heading.id}`}>{heading.text}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </Card>
+
+    <nav className={cls.MdNavigation}>
+      <ul>
+        {headings.map((heading) => (
+          <li key={heading.id}>
+            <Link href={`#${heading.id}`}>{heading.text}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
   );
 };
 

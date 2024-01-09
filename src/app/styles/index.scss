@@ -8,6 +8,7 @@ body {
   font: var(--font-m);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 code {
@@ -46,4 +47,5 @@ code {
   right: 0;
   border-left: 1px solid var(--g-color-private-blue-200-solid);
   border-right: 1px solid var(--g-color-private-blue-200-solid);
+  display: block;
 }

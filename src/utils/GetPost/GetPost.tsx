@@ -19,14 +19,14 @@ const addNav = (jsxPost: React.JSX.Element) => {
 
 
 
-export interface GetPostProps {
+export interface GetPostProps1 {
   fileName: string | undefined;
   isIndex: boolean;
 }
 
 
 
-export const GetPost = (props: GetPostProps) => {
+export const GetPost = (props: GetPostProps1) => {
   const {
     fileName,
     isIndex,
