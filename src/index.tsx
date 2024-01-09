@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { configure } from '@gravity-ui/uikit';
 import { App } from './app/App';
 import reportWebVitals from './reportWebVitals';
+import { AppThemeProvider } from './app/providers/AppThemeProvider';
 import { BrowserRouter } from 'react-router-dom';
 
 //import 'highlight.js/styles/github.css';
@@ -16,7 +17,9 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AppThemeProvider>
+        <App />
+      </AppThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );
